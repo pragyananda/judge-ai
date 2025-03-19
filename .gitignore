@@ -1,0 +1,7 @@
+judgeAI-Frontend/node_modules/
+backend/app/__pycache__
+backend/app/helpers/__pycache__/
+backend/app/models/__pycache__/
+backend/app/routes/__pycache__/
+backend/app/utils/__pycache__/
+github-recovery-codes.txt
