@@ -48,11 +48,11 @@ export const Chat = () => {
     };
 
     return (
-        <main className="flex max-w-8/12 bg-blue-300 mx-auto flex-col items-center justify-center  rounded-lg shadow-lg text-white p-4 ">
+        <main className="flex max-w-8/12 bg-cyan-300 mx-auto flex-col items-center justify-center  rounded-lg shadow-lg text-white p-4 ">
             <div className="flex flex-col gap-4 w-full h-[84vh] justify-between items-center">
                 <div className="w-full text-black p-4 flex flex-col gap-2 h-fit overflow-y-auto">
                     {messages.map((msg, index) => (
-                        <div key={index} className={`p-2 rounded-lg shadow-md max-w-[75%] ${msg.sender === "user" ? "bg-blue-500 self-end text-white" : "bg-gray-200 text-black"}`}>
+                        <div key={index} className={`p-2 rounded-lg shadow-md max-w-[75%] ${msg.sender === "user" ? "bg-cyan-500 self-end text-white" : "bg-gray-200 text-black"}`}>
                             {msg.text}
                         </div>
                     ))}
@@ -63,12 +63,12 @@ export const Chat = () => {
                         label="Email Address"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        className="pr-20 w-full py-2 pl-4 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 bg-white text-black"
+                        className="pr-20 w-full py-2 pl-4 rounded-lg border border-gray-300 focus:outline-none focus:border-cyan-500 bg-white text-black"
                         placeholder="Type a message..."
                     />
                     <Button
                         size="sm"
-                        color={input ? "gray" : "blue-gray"}
+                        color={input ? "gray" : "cyan-gray"}
                         disabled={!input}
                         onClick={sendMessage}
                         className="!absolute right-1 top-1 rounded"

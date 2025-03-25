@@ -20,7 +20,7 @@ from bson import ObjectId
 
 
 
-LLM_URL = "http://192.168.1.74:5001/generate"
+LLM_URL = "http://192.168.1.104:5001/generate/local"
 BASE_URL = "http://192.168.1.12:5000/api/uploads/"
 
 bp = Blueprint("upload", __name__, url_prefix="/api")
@@ -124,7 +124,7 @@ def send_chunks_to_llm(csv_file_path, book_folder, book_name, user_id, filename,
         csv_content = file.read()   
     
     data = {"supporting_data": csv_content}  
-    headers = {"Content-Type": "application/json"}
+    headers = {"Content-Type": "application/json","x-api-key": "qwerty"}
 
     structured_data = []
     structured_data_filename = f"{book_name}_structured.json"
@@ -132,7 +132,7 @@ def send_chunks_to_llm(csv_file_path, book_folder, book_name, user_id, filename,
 
     try:
         response = requests.post(LLM_URL, json=data, headers=headers, stream=True, timeout=30)
-
+        print("✅ LLM connection successful!",response)
         if response.status_code == 200:
             print("✅ Model connection successful!")
             socketio.emit("progress_update", {"message": "✅ Model connection successful!"})

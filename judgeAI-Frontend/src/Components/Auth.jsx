@@ -100,7 +100,7 @@ export default function Auth({ onLogin }) {
 
           <form onSubmit={handleAuth} className="md:max-w-md w-full mx-auto">
             <div className="mb-8 text-center">
-              <h3 className="text-4xl font-bold text-blue-600">
+              <h3 className="text-4xl font-bold text-cyan-600">
                 {isSignup ? "Sign Up" : "Sign In"}
               </h3>
             </div>
@@ -116,7 +116,7 @@ export default function Auth({ onLogin }) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="w-full text-sm border-b border-gray-300 focus:border-blue-600 px-2 py-3 outline-none"
+                  className="w-full text-sm border-b border-gray-300 focus:border-cyan-600 px-2 py-3 outline-none"
                   placeholder="Full Name"
                 />
               </div>
@@ -129,7 +129,7 @@ export default function Auth({ onLogin }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full text-sm border-b border-gray-300 focus:border-blue-600 px-2 py-3 outline-none"
+                className="w-full text-sm border-b border-gray-300 focus:border-cyan-600 px-2 py-3 outline-none"
                 placeholder="Enter Email"
               />
             </div>
@@ -141,7 +141,7 @@ export default function Auth({ onLogin }) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full text-sm border-b border-gray-300 focus:border-blue-600 px-2 py-3 outline-none"
+                className="w-full text-sm border-b border-gray-300 focus:border-cyan-600 px-2 py-3 outline-none"
                 placeholder="Enter Password"
               />
             </div>
@@ -149,7 +149,7 @@ export default function Auth({ onLogin }) {
             <div className="mt-8">
               <button
                 type="submit"
-                className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold tracking-wide rounded-md text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none"
               >
                 {isSignup ? "Register" : "Sign In"}
               </button>
@@ -161,7 +161,7 @@ export default function Auth({ onLogin }) {
                 <button
                   type="button"
                   onClick={() => setIsSignup(!isSignup)}
-                  className="text-blue-600 font-semibold hover:underline ml-1"
+                  className="text-cyan-600 font-semibold hover:underline ml-1"
                 >
                   {isSignup ? "Login here" : "Register here"}
                 </button>

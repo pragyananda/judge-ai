@@ -34,7 +34,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   if (isCollapsed) {
     return (
       <button
-        className="p-2 bg-blue-800 text-white fixed top-4 left-4 rounded-full z-20"
+        className="p-2 bg-cyan-800 text-white fixed top-4 left-4 rounded-full z-20"
         onClick={() => setIsCollapsed(false)}
       >
         <FaBars />
@@ -58,7 +58,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
         ) : (
           <FaSearch
             size={30}
-            className="text-blue-600 cursor-pointer hover:bg-gray-200 rounded-full p-1"
+            className="text-cyan-600 cursor-pointer hover:bg-gray-200 rounded-full p-1"
             title="Search"
             onClick={() => setIsSearchOpen(true)}
           />
@@ -66,7 +66,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
 
         <button
           onClick={() => setIsCollapsed(true)}
-          className="text-blue-600 hover:bg-gray-300 rounded p-1"
+          className="text-cyan-600 hover:bg-gray-300 rounded p-1"
           title="Close Sidebar"
         >
           <TbSquareToggle size={30} />
@@ -75,7 +75,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
 
       <button
         onClick={() => (window.location.href = "/dashboard")}
-        className="mb-4 p-2 bg-blue-500 text-white rounded flex items-center gap-2 hover:bg-blue-600"
+        className="mb-4 p-2 bg-cyan-500 text-white rounded flex items-center gap-2 hover:bg-cyan-600"
       >
         <FaComments /> New Chat
       </button>
